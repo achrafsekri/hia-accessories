@@ -1,8 +1,16 @@
 import commerce from "../lib/commerce";
 import Layout from "../components/global/layout";
+import Link from "next/link";
+import Header from "../components/pages/Home/Header";
+import Products from "../components/pages/Home/Products";
 export default function Home({ merchant, categories, products }) {
-  console.log(products);
-  return <Layout className="bg-red-500">efe</Layout>;
+  return (
+    <Layout className="bg-red-500">
+      <Header />
+      <Products products={products} categories={categories} />
+      {/* <Link href={`/products/${products[0].permalink}`} >product</Link> */}
+    </Layout>
+  );
 }
 
 export async function getStaticProps() {

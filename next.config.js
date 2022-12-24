@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  images: {
+    domains: ['picsum.photos',"cdn.chec.io"],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
